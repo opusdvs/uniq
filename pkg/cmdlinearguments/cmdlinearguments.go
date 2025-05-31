@@ -1,10 +1,10 @@
-package arguments
+package cmdlinearguments
 
 import (
 	"fmt"
 )
 
-type Arguments struct {
+type CmdLineArguments struct {
 	Count               bool `flag:"c" usage: uniq -c`
 	Duplicate           bool `flag:"d" usage: uniq -d`
 	Uniq                bool `flag:"u" usage: uniq -u`
@@ -13,11 +13,11 @@ type Arguments struct {
 	independentRegister bool `flag:"i" usage: uniq -i`
 }
 
-func (a Arguments) CheckArguments() {
+func (a CmdLineArguments) CheckArguments() {
 	checkCount(a)
 }
 
-func checkCount(a Arguments) {
+func checkCount(a CmdLineArguments) {
 	if a.Count {
 		fmt.Println("+")
 	}

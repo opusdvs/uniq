@@ -4,13 +4,13 @@ import (
 	"fmt"
 
 	"github.com/Benzinga/flagstruct"
-	"github.com/opusdvs/uniq/pkg/arguments"
+	"github.com/opusdvs/uniq/pkg/cmdlinearguments"
 	"github.com/opusdvs/uniq/pkg/readfile"
 	"github.com/opusdvs/uniq/pkg/uniqstrings"
 )
 
 func main() {
-	var arg arguments.Arguments
+	var arg cmdlinearguments.CmdLineArguments
 
 	err := flagstruct.Configure(&arg)
 	if err != nil {

@@ -1,10 +1,8 @@
 package uniqstrings
 
-import (
-	"github.com/opusdvs/uniq/pkg/arguments"
-)
+import "github.com/opusdvs/uniq/pkg/cmdlinearguments"
 
-func UniqString(lines []string, args arguments.Arguments) []string {
+func UniqString(lines []string, args cmdlinearguments.CmdLineArguments) []string {
 	return lines
 }
 
