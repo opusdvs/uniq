@@ -33,7 +33,7 @@ func ChechOutput() (io.WriteCloser, error) {
 }
 
 func ReadFile(file io.Reader) ([]string, error) {
-	lines := make([]string, 0, 50)
+	lines := []string{}
 	reader := bufio.NewReader(file)
 	for {
 		line, err := reader.ReadString('\n')
